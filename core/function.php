@@ -28,7 +28,17 @@ function custom_command($command){
 }
 
 function callback_command($command){
-    $path = __root__."command/callback_command/";
+    $path = __root__."command/callback/";
+
+    $filename = $path.$command.'.php';
+    if(file_exists($filename))
+        require_once $filename; 
+    else 
+        return false;
+}
+
+function explode_callback_command($command){
+    $path = __root__."command/explode_callback/";
 
     $filename = $path.$command.'.php';
     if(file_exists($filename))

@@ -16,13 +16,11 @@ if ($method == "message") {
 } 
 else if ($method == "callback") {
     if(!$is_callback_data_explode){
-        callback_command($command);
+        callback_command($callback_data);
     }
     else {
-        switch ($explode_callback_data[0]) {
-            default:
-                exit;
-            break;
-        }
+        explode_callback_command($explode_callback_data[0]);
     }
 }
+
+exit;
