@@ -1,8 +1,6 @@
 <?php
 if(!defined("ACCESS")) { error_code_503();}
 
-define('API_URL', 'https://api.telegram.org/bot' . BOT_TOKEN . '/');
-
 $content = file_get_contents("php://input");
 $update = json_decode($content, true);
 
@@ -21,7 +19,7 @@ if(isset($update["message"]))
     if(isset($message['voice']))
         $type = 'voice';
     else if(isset($message['video_note']))
-        $type = 'video_note'; 
+        $type = 'video_note';   
     else if(isset($message['photo']))
         $type = 'photo';
     else if(isset($message['video']))
