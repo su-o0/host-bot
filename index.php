@@ -20,6 +20,7 @@ if((fileperms("./.token/") & 0x0002) or (fileperms($token) & 0x0002)){
     echo "check token permision";
     exit;
 }
+
 $token_data = file_get_contents($token);
 
 if($token_data === false)
@@ -29,6 +30,7 @@ $json = json_decode($token_data, true);
 
 define('bot_id', $_GET["AA"]);
 define('BOT_TOKEN', $json[0]);
+define('__root__', '.usr/'.crc32(bot_id));
 
-include "core.php";
-include ".usr/".crc32(bot_id)."/default.php";
+include "core/init.php";
+include __root__."/default.php";

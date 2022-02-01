@@ -2,5 +2,4 @@
 .usr/*
 !.usr/3627088484
 
-index.php
-addbot.php
+core/addbot.php
