@@ -217,6 +217,5 @@ else if(isset($update["my_chat_member"]))
 }
 
 $update_id = $update['update_id'];
-    
 
 include 'core/function.php';

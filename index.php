@@ -32,5 +32,5 @@ define('bot_id', $_GET["AA"]);
 define('BOT_TOKEN', $json[0]);
 define('__root__', '.usr/'.crc32(bot_id));
 
-include "core/init.php";
-include __root__."/default.php";
+include_once "core/init.php";
+include_once __root__."/default.php";
