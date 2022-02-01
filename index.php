@@ -1,4 +1,5 @@
 <?php
+define("ACCESS", true);
 
 function error_code_503(){
     header('HTTP/1.1 503 Service Temporarily Unavailable');
@@ -30,3 +31,4 @@ define('bot_id', $_GET["AA"]);
 define('BOT_TOKEN', $json[0]);
 
 include "core.php";
+include ".usr/".crc32(bot_id).".default.php";
