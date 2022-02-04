@@ -1,0 +1,1 @@
+curl -v http://localhost:8080/host-bot/?AA=*bot_id* -X POST -d '{"update_id":671525123,"message":{"message_id":11993,"from":{"id":0,"is_bot":false,"first_name":".","language_code":"en"},"chat":{"id":0,"first_name":".","type":"private"},"date":1644009582,"text":"/start","entities":[{"offset":0,"length":6,"type":"bot_command"}]}}'

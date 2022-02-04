@@ -30,7 +30,7 @@ $json = json_decode($token_data, true);
 
 define('bot_id', $_GET["AA"]);
 define('BOT_TOKEN', $json[0]);
-define('__root__', 'usr/'.crc32(bot_id));
+define('__root__','usr/'.crc32(bot_id));
 
-include_once "core/init.php";
-include_once __root__."/default.php";
+include "core/init.php";
+include __root__."/default.php";
